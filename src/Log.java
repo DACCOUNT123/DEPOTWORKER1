@@ -1,5 +1,6 @@
 public class Log {
-    private static Log instance;
+   // Created Log File
+	private static Log instance;
     private StringBuffer logBuffer;
 
     private Log() {
