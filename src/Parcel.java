@@ -1,5 +1,6 @@
 
 public class Parcel {
+	// Parcel class
     private String parcelId;
     private double weight;
     private String destination;
