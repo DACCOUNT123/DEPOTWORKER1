@@ -11,7 +11,7 @@ public class Manager {
 
     public void initializeSystem() {
         // Sample customers and parcels
-        Customer customer1 = new Customer("C1", "John Doe", "123 Main St");
+        Customer customer1 = new Customer("C13", "John Doe", "123 Main St");
         Customer customer2 = new Customer("C2", "Jane Smith", "456 Oak St");
 
         Parcel parcel1 = new Parcel("P1", 10, "123 Main St");
