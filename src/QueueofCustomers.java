@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
-
+// Queue of customer
 public class QueueofCustomers {
     private Queue<Customer> queue;
 
