@@ -1,6 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
-
+// Parcel Map class
 public class ParcelMap {
     private Map<String, Parcel> parcelMap;
 
