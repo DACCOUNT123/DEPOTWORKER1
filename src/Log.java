@@ -1,5 +1,9 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Log {
-   // Created Log File
+   // Created Log File Required 
 	private static Log instance;
     private StringBuffer logBuffer;
 
@@ -23,7 +27,11 @@ public class Log {
     }
 
     public void writeLogToFile(String filename) {
-        // Implement file writing logic here
-        // e.g., using FileWriter or BufferedWriter
+    	 try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+             writer.write(logBuffer.toString());
+             System.out.println("Log written to file: " + filename);
+         } catch (IOException e) {
+             System.err.println("Error writing log to file: " + e.getMessage());
+         }
     }
 }
