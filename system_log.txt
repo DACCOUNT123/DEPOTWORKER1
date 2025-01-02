@@ -1,0 +1,7 @@
+System initialization started.
+Added customer: Customer@123a439b
+Added customer: Customer@7de26db8
+Added parcel: Parcel@1175e2db
+Added parcel: Parcel@36aa7bc2
+Starting to process customers.
+Customer processing completed.

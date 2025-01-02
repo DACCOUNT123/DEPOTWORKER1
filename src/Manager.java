@@ -13,6 +13,7 @@ public class Manager {
 
     public void initializeSystem() {
         // Log system initialization
+    	System.out.println("initializeSystem() called.");
         log.logEvent("System initialization started.");
 
         // Sample customers and parcels
