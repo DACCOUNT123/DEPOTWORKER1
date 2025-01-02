@@ -1,26 +1,54 @@
 import java.util.HashMap;
 import java.util.Map;
-// Parcel Map class
+import java.util.ArrayList;
+import java.util.List;
+
 public class ParcelMap {
-    private Map<String, Parcel> parcelMap;
+    private Map<String, Parcel> parcelMapById; // Map by Parcel ID
+    private Map<String, List<Parcel>> parcelMapByCustomerId; // Map by Customer ID
 
     public ParcelMap() {
-        parcelMap = new HashMap<>();
+        parcelMapById = new HashMap<>();
+        parcelMapByCustomerId = new HashMap<>();
     }
 
+    // Add a parcel to the maps
     public void addParcel(Parcel parcel) {
-        parcelMap.put(parcel.getParcelId(), parcel);
+        parcelMapById.put(parcel.getParcelId(), parcel);
+
+        // Add parcel to the customer's list of parcels
+        String customerId = parcel.getCustomerId();
+        parcelMapByCustomerId.putIfAbsent(customerId, new ArrayList<>());
+        parcelMapByCustomerId.get(customerId).add(parcel);
     }
 
-    public Parcel getParcel(String parcelId) {
-        return parcelMap.get(parcelId);
+    // Retrieve a parcel by its ID
+    public Parcel getParcelById(String parcelId) {
+        return parcelMapById.get(parcelId);
     }
 
+    // Retrieve all parcels associated with a customer ID
+    public List<Parcel> getParcelsByCustomerId(String customerId) {
+        return parcelMapByCustomerId.getOrDefault(customerId, new ArrayList<>());
+    }
+
+    // Remove a parcel from the maps
     public void removeParcel(String parcelId) {
-        parcelMap.remove(parcelId);
+        Parcel parcel = parcelMapById.get(parcelId);
+        if (parcel != null) {
+            parcelMapById.remove(parcelId);
+            String customerId = parcel.getCustomerId();
+            parcelMapByCustomerId.getOrDefault(customerId, new ArrayList<>()).remove(parcel);
+
+            // Clean up if the customer has no more parcels
+            if (parcelMapByCustomerId.get(customerId).isEmpty()) {
+                parcelMapByCustomerId.remove(customerId);
+            }
+        }
     }
 
-    public boolean containsParcel(String parcelId) {
-        return parcelMap.containsKey(parcelId);
+    // Check if a parcel exists by its ID
+    public boolean containsParcelById(String parcelId) {
+        return parcelMapById.containsKey(parcelId);
     }
 }

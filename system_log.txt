@@ -1,7 +1,8 @@
 System initialization started.
-Added customer: Customer@123a439b
-Added customer: Customer@7de26db8
-Added parcel: Parcel@1175e2db
-Added parcel: Parcel@36aa7bc2
+Added customer: Customer ID: C13, Name: John Doe, Address: 123 Main St
+Added customer: Customer ID: C2, Name: Jane Smith, Address: 456 Oak St
+Added parcel: Parcel ID: P1, Weight: 10.0, Destination: 123 Main St, Status: Pending, Customer ID: C13
+Added parcel: Parcel ID: P2, Weight: 15.0, Destination: 456 Oak St, Status: Pending, Customer ID: C2
 Starting to process customers.
+Customer John Doe processed with Parcel ID: P1
 Customer processing completed.

@@ -12,39 +12,32 @@ public class Manager {
     }
 
     public void initializeSystem() {
-        // Log system initialization
-    	System.out.println("initializeSystem() called.");
-        log.logEvent("System initialization started.");
+    	  log.logEvent("System initialization started.");
 
-        // Sample customers and parcels
-        Customer customer1 = new Customer("C13", "John Doe", "123 Main St");
-        Customer customer2 = new Customer("C2", "Jane Smith", "456 Oak St");
+    	    // Sample customers
+    	    Customer customer1 = new Customer("C13", "John Doe", "123 Main St");
+    	    Customer customer2 = new Customer("C2", "Jane Smith", "456 Oak St");
 
-        Parcel parcel1 = new Parcel("P1", 10, "123 Main St");
-        Parcel parcel2 = new Parcel("P2", 15, "456 Oak St");
+    	    // Sample parcels associated with customers
+    	    Parcel parcel1 = new Parcel("P1", 10, "123 Main St", "C13"); // Linked to customer1
+    	    Parcel parcel2 = new Parcel("P2", 15, "456 Oak St", "C2"); // Linked to customer2
 
-        // Add customers and parcels to the system
-        queueOfCustomers.addCustomer(customer1);
-        log.logEvent("Added customer: " + customer1);
-        queueOfCustomers.addCustomer(customer2);
-        log.logEvent("Added customer: " + customer2);
+    	    // Add customers and parcels to the system
+    	    queueOfCustomers.addCustomer(customer1);
+    	    log.logEvent("Added customer: " + customer1.getCustomerDetails());
+    	    queueOfCustomers.addCustomer(customer2);
+    	    log.logEvent("Added customer: " + customer2.getCustomerDetails());
 
-        parcelMap.addParcel(parcel1);
-        log.logEvent("Added parcel: " + parcel1);
-        parcelMap.addParcel(parcel2);
-        log.logEvent("Added parcel: " + parcel2);
+    	    parcelMap.addParcel(parcel1);
+    	    log.logEvent("Added parcel: " + parcel1.getParcelDetails());
+    	    parcelMap.addParcel(parcel2);
+    	    log.logEvent("Added parcel: " + parcel2.getParcelDetails());
 
-        // Log the start of customer processing
-        log.logEvent("Starting to process customers.");
+    	    log.logEvent("Starting to process customers.");
+    	    worker.processCustomer(); // Process first customer
+    	    log.logEvent("Customer processing completed.");
 
-        // Start processing customers
-        worker.processCustomer(); // Process first customer
-
-        // Log completion of processing
-        log.logEvent("Customer processing completed.");
-
-        // Write log to a file
-        log.writeLogToFile("system_log.txt");
+    	    log.writeLogToFile("system_log.txt");
     }
 
     public static void main(String[] args) {
