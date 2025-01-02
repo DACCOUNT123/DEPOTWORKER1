@@ -31,6 +31,9 @@ public class ParcelMap {
     public List<Parcel> getParcelsByCustomerId(String customerId) {
         return parcelMapByCustomerId.getOrDefault(customerId, new ArrayList<>());
     }
+    public List<Parcel> getAllParcels() {
+        return new ArrayList<>(parcelMapById.values());
+    }
 
     // Remove a parcel from the maps
     public void removeParcel(String parcelId) {
