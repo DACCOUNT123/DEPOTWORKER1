@@ -1,5 +1,5 @@
 import java.util.List;
-
+// This is worker class
 public class Worker {
     private QueueofCustomers queue;
     private ParcelMap parcelMap;
