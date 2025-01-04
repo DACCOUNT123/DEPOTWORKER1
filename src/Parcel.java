@@ -3,7 +3,7 @@ public class Parcel {
     private double weight;
     private String destination;
     private String status;
-    private String customerId; // Added field to associate the parcel with a customer
+    private String customerId; // Added field to associate the parcel with a customer that is required
 
     public Parcel(String parcelId, double weight, String destination, String customerId) {
         this.parcelId = parcelId;
