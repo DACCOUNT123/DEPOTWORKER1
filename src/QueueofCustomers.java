@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-// Queue of customer
+// Queue of customer Additionbal fileds
 public class QueueofCustomers {
     private Queue<Customer> queue;
 
