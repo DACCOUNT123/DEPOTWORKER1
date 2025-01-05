@@ -10,7 +10,7 @@ public class Worker {
     }
 
     public double calculateFee(Parcel parcel) {
-        // Simple fee calculation based on parcel weight
+        // Simple fee calculation based on parcel weight input
         return parcel.getWeight() * 2.5;  // $2.5 per weight unit
     }
 
