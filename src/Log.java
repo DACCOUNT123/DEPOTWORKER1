@@ -1,7 +1,7 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-// Log code is finalised
+// Log code is created with class log
 public class Log {
     private static Log instance;
     private StringBuffer logBuffer;
