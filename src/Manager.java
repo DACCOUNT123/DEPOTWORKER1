@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+// Defining Manager class
 public class Manager {
     private QueueofCustomers queueOfCustomers;
     private ParcelMap parcelMap;
