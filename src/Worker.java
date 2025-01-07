@@ -14,8 +14,9 @@ public class Worker {
         return parcel.getWeight() * 2.5;  // $2.5 per weight unit
     }
 
-    public void processCustomer() {
+    public String processCustomer() {
         Customer customer = queue.removeCustomer();
+        String s="";
         if (customer != null) {
             List<Parcel> parcels = parcelMap.getParcelsByCustomerId(customer.getCustomerId());
             if (!parcels.isEmpty()) {
@@ -26,13 +27,17 @@ public class Worker {
                     System.out.println("Fee: $" + fee);
                     parcel.updateStatus("Processed");
                     Log.getInstance().logEvent("Customer " + customer.getName() + " processed with Parcel ID: " + parcel.getParcelId());
+                    s= "Processing customer: " + customer.getCustomerDetails()+" "+"Parcel details: " + parcel.getParcelDetails()+" "+"Fee: $" + fee;
                 }
             } else {
                 System.out.println("No parcels found for customer: " + customer.getName());
+            s="No parcels found for customer: " + customer.getName();
             }
         } else {
             System.out.println("No customers in the queue.");
+        s="No customers in the queue.";
         }
+        return s;
     }
 
 

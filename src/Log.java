@@ -38,8 +38,9 @@ public class Log {
     }
 
     // Display the log in the console
-    public void displayLog() {
+    public String displayLog() {
         System.out.println("---- Log Events ----");
         System.out.println(logBuffer.toString());
+		return logBuffer.toString();
     }
 }

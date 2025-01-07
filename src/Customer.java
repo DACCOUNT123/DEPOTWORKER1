@@ -1,5 +1,4 @@
 public class Customer {
-	// Data to be added corresponding to customers
     private String customerId;
     private String name;
     private String address;

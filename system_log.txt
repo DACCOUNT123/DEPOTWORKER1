@@ -1,5 +1,4 @@
-System initialized.
-Added customer: Customer ID: C1, Name: ABC, Address: st news
-Added parcel: Parcel ID: 1, Weight: 20.0, Destination: st news, Status: Pending, Customer ID: C1
-Customer ABC processed with Parcel ID: 1
+Added customer: Customer ID: 1, Name: VXC, Address: ABC
+Added parcel: Parcel ID: 1, Weight: 34.0, Destination: ABC, Status: Pending, Customer ID: 1
+Customer VXC processed with Parcel ID: 1
 System exited.

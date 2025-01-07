@@ -1,10 +1,10 @@
 import java.util.Scanner;
 // Defining Manager class
 public class Manager {
-    private QueueofCustomers queueOfCustomers;
-    private ParcelMap parcelMap;
-    private Worker worker;
-    private Log log; // Instance of the Log class
+    QueueofCustomers queueOfCustomers;
+    ParcelMap parcelMap;
+    Worker worker;
+    Log log; // Instance of the Log class
     private Scanner scanner;
 
     public Manager() {
