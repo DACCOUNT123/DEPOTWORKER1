@@ -1,4 +1,5 @@
-Added customer: Customer ID: 1, Name: VXC, Address: ABC
-Added parcel: Parcel ID: 1, Weight: 34.0, Destination: ABC, Status: Pending, Customer ID: 1
-Customer VXC processed with Parcel ID: 1
+System initialized.
+Added customer: Customer ID: 1, Name: abx, Address: abx
+Added parcel: Parcel ID: 1, Weight: 201.0, Destination: xyz, Status: Pending, Customer ID: 1
+Customer abx processed with Parcel ID: 1
 System exited.
